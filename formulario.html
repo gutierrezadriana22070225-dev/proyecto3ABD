@@ -1,0 +1,94 @@
+<html>
+<head>
+  <title>Formulario de Emociones</title>
+
+  <script>
+    function confirmarEnvio(event) {
+      event.preventDefault(); // Evita que se abra el correo
+
+      // Oculta el formulario
+      document.getElementById("formulario").style.display = "none";
+
+      // Muestra el mensaje final
+      document.getElementById("mensajeFinal").style.display = "block";
+    }
+  </script>
+
+</head>
+
+<body bgcolor="lightpink" text="black">
+
+<h2>Formulario sobre las Emociones</h2>
+
+<!-- FORMULARIO -->
+<form id="formulario" onsubmit="confirmarEnvio(event)">
+
+  Nombre: 
+  <input type="text" name="nombre"><br><br>
+
+  Apellidos: 
+  <input type="text" name="apellidos"><br><br>
+
+  Celular: 
+  <input type="text" name="celular"><br><br>
+
+  Sexo: <br>
+  <input type="radio" name="sexo" value="Hombre"> Hombre
+  <input type="radio" name="sexo" value="Mujer"> Mujer
+  <br><br>
+
+  <h3>¿Qué emoción sientes con más frecuencia?</h3>
+  <select name="emocion_frecuente">
+    <option>Felicidad</option>
+    <option>Tristeza</option>
+    <option>Ansiedad</option>
+    <option>Calma</option>
+    <option>Enojo</option>
+    <option>Miedo</option>
+  </select>
+  <br><br>
+
+  <h3>¿Qué emociones te cuesta expresar?</h3>
+  <input type="checkbox" name="emociones_dificiles" value="Felicidad"> Felicidad<br>
+  <input type="checkbox" name="emociones_dificiles" value="Tristeza"> Tristeza<br>
+  <input type="checkbox" name="emociones_dificiles" value="Enojo"> Enojo<br>
+  <input type="checkbox" name="emociones_dificiles" value="Miedo"> Miedo<br>
+  <input type="checkbox" name="emociones_dificiles" value="Ansiedad"> Ansiedad<br>
+  <br>
+
+  <h3>¿Qué haces para sentirte mejor cuando tienes una emoción difícil?</h3>
+  <select name="estrategia">
+    <option>Escuchar música</option>
+    <option>Hablar con alguien</option>
+    <option>Dormir / descansar</option>
+    <option>Salir a caminar</option>
+    <option>Llorar / liberar emoción</option>
+    <option>Hacer ejercicio</option>
+  </select>
+  <br><br>
+
+  <h3>Describe una emoción que experimentaste recientemente y qué la causó:</h3>
+  <textarea cols="40" rows="5" name="descripcion"></textarea>
+  <br><br>
+
+  <input type="submit" value="Enviar">
+  <input type="reset" value="Borrar">
+
+</form>
+
+<!-- MENSAJE FINAL OCULTO -->
+<div id="mensajeFinal"
+     style="display:none; 
+            background:white; 
+            padding:20px; 
+            border:3px solid purple; 
+            width:60%; 
+            margin:auto; 
+            text-align:center;
+            font-size:25px;
+            font-weight:bold;">
+  Cuestionario resuelto con éxito ✔️
+</div>
+<p align=right>Adriana Zoe Gutierrez Hernandez 5A programacion 28-11-25</p>
+</body>
+</html>
